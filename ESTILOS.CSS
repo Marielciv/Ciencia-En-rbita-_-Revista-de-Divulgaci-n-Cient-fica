@@ -1,0 +1,275 @@
+/* css/estilos.css */
+
+/* --- IMPORTAR FUENTES (Google Fonts) --- */
+/* Montserrat para títulos modernos y Roboto para lectura cómoda */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@700;900&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+/* --- VARIABLES DE COLOR (Paleta Científica) --- */
+:root {
+    --color-fondo: #f0f2f5;       /* Gris muy claro, moderno */
+    --color-texto: #2c3e50;       /* Azul oscuro grisáceo, mejor que negro puro */
+    --color-vino: #800020;        /* Tu color elegante */
+    --color-espacio: #0a0e17;     /* Negro azulado profundo */
+    --color-ciencia: #00cfc1;     /* Cian eléctrico (el toque llamativo) */
+    --color-blanco: #ffffff;
+}
+
+/* --- ESTILOS GENERALES --- */
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente de lectura */
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6; /* Mejor espacio entre líneas para leer */
+}
+
+/* --- HEADER (Estilo Espacial) --- */
+header {
+    /* Degradado sutil para parecer el espacio profundo */
+    background: linear-gradient(135deg, #000000 0%, #1a1a2e 100%);
+    color: var(--color-blanco);
+    padding: 2em 0; /* Más espacio vertical */
+    text-align: center;
+    /* Borde inferior brillante neón */
+    border-bottom: 4px solid var(--color-ciencia); 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+header h1 {
+    font-family: 'Great Vibes', cursive; /* Fuente cursiva elegante */
+    margin: 0;
+    font-size: 4.5em; /* Hacemos la letra más grande para que luzca */
+    font-weight: 400; /* Las cursivas se ven mejor sin negrita excesiva */
+    text-transform: none; /* Permitimos minúsculas para que la cursiva se conecte bien */
+    letter-spacing: 1px;
+    color: var(--color-blanco); 
+    text-shadow: 0 0 15px rgba(0, 207, 193, 0.5); /* Brillo neón cian detrás de la letra */
+}
+
+header p {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    color: #a0a0a0;
+    margin-top: 5px;
+    font-size: 1.1em;
+}
+
+/* --- NAVEGACIÓN (Estilo Académico) --- */
+nav {
+    background: var(--color-vino);
+    color: var(--color-blanco);
+    padding: 0; /* Quitamos padding contenedor para botones full height */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: sticky; /* El menú se queda pegado al bajar */
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    display: inline-block;
+    color: var(--color-blanco);
+    text-decoration: none;
+    padding: 1em 1.5em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent; /* Preparar para hover */
+}
+
+nav a:hover {
+    background-color: #580016; /* Vino más oscuro */
+    color: var(--color-ciencia); /* Texto Cian brillante */
+    border-bottom: 3px solid var(--color-ciencia); /* Subrayado neón */
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.main-container {
+    display: flex;
+    width: 90%; /* Un poco más ancho */
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 30px; /* Espacio entre columnas */
+    background: transparent; /* Fondo transparente para ver el gris de fondo */
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+}
+
+/* --- ÁREA DE CONTENIDO --- */
+.content-area {
+    flex: 3;
+}
+
+/* Tarjetas de Artículos (Estilo "Paper" Científico) */
+.articulo-card {
+    margin-bottom: 30px;
+    padding: 30px; /* Más aire interno */
+    border: none; /* Quitamos borde simple */
+    border-radius: 12px;
+    background-color: var(--color-blanco);
+    /* Sombra elegante que da profundidad */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
+    border-left: 6px solid var(--color-vino);
+    transition: transform 0.3s ease;
+}
+
+.articulo-card:hover {
+    transform: translateY(-5px); /* Se levanta un poco al pasar el mouse */
+}
+
+.articulo-card h2 {
+    font-family: 'Great Vibes', cursive; /* Letra cursiva bonita */
+    font-size: 2.8em; /* Tamaño grande para que se entienda bien */
+    color: var(--color-vino); /* Color elegante */
+    font-weight: normal; /* La cursiva se ve mejor sin negrita */
+    margin-top: 0;
+    margin-bottom: 15px;
+    
+    /* Sombreado suave para darle profundidad */
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.2); 
+    
+    /* Un detalle moderno: una línea cian debajo */
+    border-bottom: 3px solid var(--color-ciencia); 
+    display: inline-block; /* Para que la línea se ajuste al texto */
+    padding-bottom: 5px;
+}
+/* Subtítulos dentro de artículos */
+.articulo-card h3 {
+    color: var(--color-vino);
+    margin-top: 25px;
+}
+
+.articulo-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra a las imágenes */
+}
+
+/* --- SIDEBAR (Barra Lateral) --- */
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--color-blanco);
+    border-radius: 12px;
+    height: fit-content; /* Se ajusta al contenido */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.sidebar-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: var(--color-vino);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--color-ciencia); /* Detalle cian */
+    display: block;
+    padding-bottom: 10px;
+}
+
+.sabias-que-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f8f9fa; /* Gris muy pálido */
+    border-left: 4px solid var(--color-ciencia); /* Borde lateral cian */
+    font-size: 0.95em;
+    transition: background-color 0.3s;
+}
+
+.sabias-que-item:hover {
+    background-color: #e3fbf9; /* Fondo cian muy pálido al pasar mouse */
+}
+
+.sabias-que-item strong {
+    color: var(--color-espacio);
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* --- TABLAS (Estilo Moderno) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.95em;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden; /* Para que las esquinas redondas funcionen */
+}
+
+th {
+    background-color: var(--color-espacio); /* Cabecera negra/azul */
+    color: var(--color-blanco);
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px 15px;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* --- FOOTER (Autor y Pie de página) --- */
+.author-footer {
+    font-size: 0.85em;
+    color: #666;
+    text-align: right;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    font-weight: 500;
+}
+
+footer {
+    text-align: center;
+    padding: 3em 0;
+    background-color: var(--color-espacio);
+    color: #888;
+    margin-top: 40px;
+    border-top: 4px solid var(--color-vino);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* --- RESPONSIVE (Celulares) --- */
+@media screen and (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .sidebar {
+        width: auto;
+        margin-top: 20px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    nav a {
+        display: block; /* Menú vertical en celular */
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+}

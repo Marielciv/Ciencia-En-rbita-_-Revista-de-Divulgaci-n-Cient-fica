@@ -1,0 +1,200 @@
+/*Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilos generales */
+body {
+    font-family:initial;
+    background-color: white;
+    color: black;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: #0d0d0d   ;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.6em;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+/* --- NAVEGACIÓN (Estilo Académico) --- */
+nav {
+    background:black;
+    color: white;
+    padding: 0; /* Quitamos padding contenedor para botones full height */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(248, 248, 248, 0.2);
+    position: sticky; /* El menú se queda pegado al bajar */
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    display: inline-block;
+    color: var(--color-vino);
+    text-decoration: none;
+    padding: 1em 1.5em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent; /* Preparar para hover */
+}
+
+nav a:hover {
+    background-color: yellowgreen; /* Vino más oscuro */
+    color: var(--color-amarillo); /* Texto Cian brillante */
+    border-bottom: 3px solid var(--color-amarillo); /* Subrayado neón */
+}
+
+
+/* Estructura principal */
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* área principal + aside */
+    gap: 3rem;
+    padding: 3rem;
+}
+
+/* Contenedor de contenido principal */
+.contenido {
+    display: flex;
+    flex-direction:column;
+    gap: 1.5rem;
+}
+
+/* Secciones principales */
+section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(49, 46, 46, 0.815);  /*sombra al cuadro del texto*/
+    margin-bottom: 2rem;
+}
+
+section h1 {
+    color: black;
+    font-size: 2.5em;
+}
+
+/* Títulos dentro de section */
+section h2 {
+    color: #8AA624;
+    font-size: 2em;
+    margin-bottom: 3rem;
+}
+
+/* Artículos */
+article {
+    margin-bottom: 1rem;
+    border-left: 5px solid #727D73;
+    padding-left: 2rem;  /*es el espacio de la raya con el texto*/
+}
+
+/* Artículos títulos */
+article h3 {
+    color: #006a4c;
+    margin-bottom: 0.5rem;
+}
+
+/* Aside  barra lateral*/
+aside {
+    background-color: #dadab5;
+    padding: 2rem;
+    border-radius: 9px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+aside h2 {
+    color: #498e08;  /*el color de la letra del titulo*/
+    font-family:initial;
+    font-size: 1.9em;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    margin-bottom: 1rem;
+}
+
+aside ul li a {
+    color: #313131;    /*el color de la letra del link*/
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 1.1em;
+    text-decoration: none;
+}
+
+aside ul li a:hover {
+    color: #93bc47;    /*el color de la letra del link*/
+    text-decoration: underline;
+}
+
+/* --- SIDEBAR (Barra Lateral) --- */
+.busqueda_rapida {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--color-blanco);
+    border-radius: 12px;
+    height: fit-content; /* Se ajusta al contenido */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+
+.NT_IN {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffffdf; /* Gris muy pálido */
+    border-left: 4px solid var(--color-ciencia); /* Borde lateral cian */
+    font-size: 0.95em;
+    transition: background-color 0.3s;
+}
+
+.NT_IN:hover {
+    background-color: #ffffdf96; /* Fondo cian muy pálido al pasar mouse */
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px ;
+}
+
+.imagenes-newton {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* espacio entre imágenes */
+    justify-content: center; /* centrarlas */
+    align-items: center;
+}
+
+/* Pie de página */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    aside {
+        order: -1; /* el aside se muestra arriba en pantallas pequeñas */
+    }
+}

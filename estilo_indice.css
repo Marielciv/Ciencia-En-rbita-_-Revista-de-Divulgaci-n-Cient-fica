@@ -1,0 +1,100 @@
+body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+        }
+
+        .menu {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 15px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            color: #ffcc00;
+        }
+        .portada {
+            width: 100%;
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+        }
+        .indice {
+            width: 75%;
+            margin: 70px auto;
+            background-color: white;
+            padding: 45px;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        .indice h1 {
+            text-align: center;
+            font-size: 36px;
+            letter-spacing: 4px;
+            color: #111;
+            border-bottom: 5px solid #ffcc00;
+            padding-bottom: 15px;
+            margin-bottom: 35px;
+        }
+
+        .indice ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .indice li {
+            font-size: 19px;
+            margin-bottom: 15px;
+            padding: 12px 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+            background: #f4f4f4;
+        }
+
+        .indice li:hover {
+            background-color: #ffcc00;
+            transform: translateX(10px);
+        }
+
+        .indice a {
+            text-decoration: none;
+            color: #0a3d62;
+            font-weight: bold;
+        }
+
+        .indice a:hover {
+            color: black;
+        }
+
+        .indice ul ul {
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+
+        .indice ul ul li {
+            background-color: #e8f1ff;
+            font-size: 17px;
+        }
+
+        .numero {
+            float: right;
+            font-weight: bold;
+            color: #444;
+             }
+              footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
